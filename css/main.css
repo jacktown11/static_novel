@@ -1,4 +1,6 @@
-
+*{
+  /* box-shadow: 0 0 1px #f00; */
+}
 /* 总体及复用样式 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -74,32 +76,50 @@ a:active {
 .cent {
   text-align: center;
 }
-.fl {
+._fl {
   float: left;
 }
-.fr {
+._fr {
   float: right;
 }
-.cl:after {
+._cl:after {
   display: block;
   clear: both;
   content: "";
   visibility: hidden;
   height: 0;
 }
-.cl {
+._cl {
   zoom: 1;
 }
-.h2{
+._h2{
   font-weight: bold;
   font-size: 1.6rem;
   margin: 0 0 12px 0;
+  color: #222;
 }
-.spl{
+._spl{
+  display: block;
   height: 0;
   border-bottom: 1.5px solid #939393;
 }
-
+._elps{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+._sz16{
+  font-size: 1.6rem;
+}
+._sz18{
+  font-size: 1.8rem;
+}
+._sz20{
+  font-size: 2.0rem;
+}
+._sz28{
+  font-size: 2.8rem;
+}
 
 /* 头部标题和搜索栏 */
 .head {
@@ -328,18 +348,80 @@ a:active {
   width: 694px;
   margin: auto;
 }
-.edt .sldw{
-  height: 173px;
-  overflow: hidden;
+.edt .sld1w{
+  height: 174px;
+  /* overflow: hidden; */
 }
-.edt .sld{
+.edt .sld1{
   width: 300px;
+  height: 174px;
+  position: relative;
+}
+.pic1w {
+  width: 270px;
+  height: 124px;
+  margin: 28px 15px 22px 15px;
   overflow: hidden;
 }
+.pic1{
+  width: 92px;
+  height: 122px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -46px;
+  margin-top: -61px;
+}
+.pic1i{
+  width: 100%;
+  height: 100%;
+}
+.tol, .tor{
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  padding: 1px 1px 0 0;
+  border-radius: 50%;
+}
+.tol:hover,
+.tor:hover{
+  color: #fff;
+  background-color: #f0425b;
+}
+.tol{
+  left: 7px;
+  transform: translate(-50%, -50%);
+}
+.tor{
+  padding: 1px 0 0 1px;
+  transform: translate(50%, -50%);
+  right: 7px;
+}
+.ctrls{
+  position: absolute;
+  left: 50%;
+  bottom : 4px;
+  transform: translateX(-50%);
+}
+.ctrl1{
+  display: block;
+  margin-left: 4px;
+  border: 1px solid transparent;
+  width: 4px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: #eee;
+  cursor: pointer;
+}
+.ctrl1.on{
+  background-color: transparent;
+  border-color: #f0425b;
+}
+
 .edt .info{
   margin-left: 320px;
 }
-.edt .info .h2{
+.edt .info ._h2{
   padding-top: 38px;
 }
 .edt .sum{
@@ -363,10 +445,12 @@ a:active {
 }
 .ebk{
   width: 228px;
+  box-sizing: border-box;
   border-top: 1px solid #eee;
   margin-top: 18px;
+  padding: 0 6px;
 }
-.ebk .h2{
+.ebk ._h2{
   margin-top: 18px;
   margin-bottom: 5px;
   font-weight: bold;
@@ -488,7 +572,7 @@ a:active {
 .newr{
   height: 382px;
 }
-.newr .h2{
+.newr ._h2{
   font-size: 24px;
   margin-bottom: 4px;
 }
@@ -499,11 +583,149 @@ a:active {
   background-color: #eee;
   position: relative;
 }
-.newr .sldw{
+.sld2{
   height: 110px;
   margin-top: 30px;
   background-color: #aaa;
+  position: relative;
 }
+.sld2i{
+  width: 80px;
+  height: 108px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -54px;
+}
+.pic2{
+  width: 100%;
+  height: 100%;
+}
+.one{
+  animation: rotate_1 30s linear 0.5s infinite;
+}
+.two{
+  animation: rotate_2 30s linear 0.5s infinite;
+}
+.thr{
+  animation: rotate_3 30s linear 0.5s infinite;
+}
+@keyframes rotate_1 {
+  0% {
+    transform:  translateX(0px) scale(1);
+    z-index: 3;
+  }
+  7.5% {
+    transform:  translateX(60px) scale(0.85);
+    z-index: 2
+  }
+  10%{
+    transform:  translateX(40px) scale(0.8);
+    z-index: 1
+  }
+  33.33%{
+    transform:  translateX(40px) scale(0.8);
+    z-index: 1
+  }
+  43.33%{
+    transform:  translateX(-40px) scale(0.8);
+    z-index: 1
+  }
+  66.66%{
+    transform:  translateX(-40px) scale(0.8);
+    z-index: 1
+  }
+  69.16%{
+    transform:  translateX(-60px) scale(0.85);
+    z-index: 3;
+  }
+  76.66%{
+    transform:  translateX(0px) scale(1);
+    z-index: 3;
+  }
+  100% {
+    transform:  translateX(0px) scale(1);
+    z-index: 3;
+  }
+}
+@keyframes rotate_2 {
+  0% {
+    transform:  translateX(-40px) scale(0.8);
+    z-index: 1
+  }
+  2.5%{
+    transform:  translateX(-60px) scale(0.85);
+    z-index: 3;
+  }
+  10%{
+    transform:  translateX(0px) scale(1);
+    z-index: 3;
+  }
+  33.33% {
+    transform:  translateX(0px) scale(1);
+    z-index: 3;
+  }
+  40.83% {
+    transform:  translateX(60px) scale(0.85);
+    z-index: 2
+  }
+  43.33%{
+    transform:  translateX(40px) scale(0.8);
+    z-index: 1
+  }
+  66.66%{
+    transform:  translateX(40px) scale(0.8);
+    z-index: 1
+  }
+  76.66%{
+    transform:  translateX(-40px) scale(0.8);
+    z-index: 1
+  }
+  100% {
+    transform:  translateX(-40px) scale(0.8);
+    z-index: 1
+  }
+}
+@keyframes rotate_3 {
+  0%{
+    transform:  translateX(40px) scale(0.8);
+    z-index: 1
+  }
+  10%{
+    transform:  translateX(-40px) scale(0.8);
+    z-index: 1
+  }
+  33.33% {
+    transform:  translateX(-40px) scale(0.8);
+    z-index: 1
+  }
+  35.83%{
+    transform:  translateX(-60px) scale(0.85);
+    z-index: 3;
+  }
+  43.33%{
+    transform:  translateX(0px) scale(1);
+    z-index: 3;
+  }
+  66.66% {
+    transform:  translateX(0px) scale(1);
+    z-index: 3;
+  }
+  73.16% {
+    transform:  translateX(60px) scale(0.85);
+    z-index: 2
+  }
+  76.66%{
+    transform:  translateX(40px) scale(0.8);
+    z-index: 2
+  }
+  100%{
+    transform:  translateX(40px) scale(0.8);
+    z-index: 1
+  }
+}
+
 .newr .big .h3{
   margin-top: 18px;
   font-size: 2rem;
@@ -608,6 +830,10 @@ a:active {
   margin-left: 960px;
 }
 /* 主页>更新与新人>最近更新 */
+.newu ._h2{
+  font-size: 2.4rem;
+  margin-bottom: 4px;
+}
 .newu .big{
   width: 188px;
   height: 384px;
@@ -665,18 +891,223 @@ a:active {
 /* 主页>更新与新人>新人新书榜 */
 
 /* 主页>友情连接 */
-
+.lks{
+  margin-top: 27px;
+}
 
 /* 详情页 */
-
+.nvl{
+  width: 930px;
+}
+.side{
+  width: 210px;
+  margin-left: 960px;
+}
 /* 详情页>主栏 */
 
 /* 详情页>主栏>层级条 */
+.nav1{
+  color: #252525;
+  margin-top: 18px;
+  margin-left: 22px;
+}
 /* 详情页>主栏>小说总览 */
+.sum1w{
+  margin-top: 27px;
+  margin-left: 22px;
+  position: relative;
+}
+.cov1{
+  width: 156px;
+  height: 208px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.rds{
+  width: 125px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.rd{
+  width: 131px;
+  height: 39px;
+  margin-bottom: 5px;
+  display: block;
+  position: relative;
+  right: -12px;
+  cursor: pointer;
+  border: 2px solid #f0425b;
+  color: #f0425b;
+  font-weight: bold;
+  background-color: transparent;
+  text-align: center;
+  line-height: 39px;
+  border-radius: 5px;
+}
+.rd:last-child{
+  margin-bottom: 0;
+}
+.rd.on{
+  color: #fff;
+  background-color: #f0425b;
+}
+.sum1{
+  padding: 14px 127px 14px 177px;
+}
+.prs{
+  margin-top: 22px;
+}
+.prs > span{
+  margin-right: 20px;
+}
+.tgs{
+  margin-top: 16px;
+}
+.tg{
+  height: 23px;
+  padding: 0 10px;
+  margin-right: 12px;
+  line-height: 23px;
+  border: 1px solid #c9c9c9;
+  border-radius: 11px;;
+  color: #586390;
+}
+.abs{
+  margin-top: 36px;
+}
+.stat{
+  margin-top: 27px;
+  color: #b6b6b6;
+}
+.stat span{
+  margin-right: 33px;
+}
+.num1{
+  color: #222;
+  margin-right: 2px;
+  font-weight: bold;
+}
+.tmw{
+  margin-top: 2px;
+}
+
 /* 详情页>主栏>读书简介和评论 */
+.inf1{
+  margin-top: 54px;
+}
+.bar{
+  background-color: #f5f5f5;
+}
+.ctrl{
+  height:44px;
+  width: 218px;
+  border:none;
+  border-top: 1px solid transparent;
+  background-color: transparent;
+  color: #222;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.ctrl.on{
+  color: #f0425b;
+  background-color: #fff;
+  border-top-color: #f0425b;
+}
+.abs1{
+  text-indent: 2em;
+  line-height: 1.4;
+  margin-top: 23px;
+}
+.freew{
+  margin-left: 22px;
+}
+.free{
+  margin-top: 20px;
+  font-weight: bold;
+}
+.free .txt{
+  width: 80px;
+}
+.free ._spl{
+  width: 820px;
+  position: relative;
+  top: 9px;
+  border-color: #f5f5f5;
+}
+.praw{
+  margin-top: 18px;
+  line-height: 2;
+}
+.praw > p{
+  text-indent: 2em;
+}
 /* 详情页>主栏>相关小说 */
+.relw{
+  margin-top: 32px;
+}
+.relh{
+  width: 114px;
+  padding-bottom: 14px;
+  margin-bottom: 0;
+  color: #f0425b;
+  font-weight: bold;
+  position: relative;
+}
+.relh::after{
+  position: absolute;
+  content: "";
+  height: 0;
+  bottom: -1.5px;
+  left: 0;
+  right: 0;
+  border-bottom: 1.5px solid #f0425b;
+  z-index: 5;
+}
+.relw ._spl{
+  border-color: #f5f5f5;
+}
+.rels{
+  margin: 22px 0 22px 22px;
+}
+.rel{
+  width: 117px;
+  margin: 0 6px;
+}
+.cov2{
+  width: 117px;
+  height: 155px;
+}
+.relt{
+  text-align: center;
+  margin-top: 18px;
+  /* color: #222; */
+  font-weight: bold;
+}
 
 /* 详情页>侧边栏 */
+
+.tdpw {
+  padding: 54px 0;
+  text-align: center;
+}
+.tip{
+  color: #222;
+}
+.tdp{
+  width: 160px;
+  height: 150px;
+  display: block;
+  margin: 20px auto 0 auto;
+}
+.side .rk{
+  margin-top: 14px;
+  margin-left: 0;
+}
 
 /* 页脚区域 */
 .foot {
