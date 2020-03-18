@@ -1,0 +1,688 @@
+
+/* 总体及复用样式 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #666;
+}
+html,
+body,
+input,
+button {
+  margin: 0;
+  padding: 0;
+}
+input,
+button {
+  outline: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #666;
+  text-decoration: none;
+}
+.mc {
+  width: 1170px;
+  margin: auto;
+}
+.cent {
+  text-align: center;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.cl:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+.cl {
+  zoom: 1;
+}
+.h2{
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin: 0 0 12px 0;
+}
+.spl{
+  height: 0;
+  border-bottom: 1.5px solid #939393;
+}
+
+
+/* 头部标题和搜索栏 */
+.head {
+  margin: 14px auto 22px;
+  height: 56px;
+}
+.head > .tl {
+  float: left;
+  margin-top: 2px;
+  font-size: 5.2rem;
+  font-weight: bold;
+  color: #f0425b;
+}
+.sea-w {
+  width: 520px;
+  margin: auto;
+  height: 54px;
+  overflow: hidden;
+}
+.sea-w .in {
+  height: 36px;
+  width: 460px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  border: 2px solid #f0425b;
+  border-right: none;
+  font-size: 1.4rem;
+}
+.sea-w .cf {
+  height: 36px;
+  width: 60px;
+  display: inline-block;
+  vertical-align: top;
+  border: none;
+  background-color: #f0425b;
+  cursor: pointer;
+  color: #fff;
+}
+.hot-w {
+  height: 14px;
+  margin-top: 4px;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.hot-w .lk {
+  padding-left: 4px;
+  color: #f0425b;
+}
+
+/* 顶部导航条 */
+.nav {
+  height: 40px;
+  background-color: #f0425b;
+}
+.nav .lks {
+  width: 1170px;
+  height: 100%;
+  margin: auto;
+}
+.nav .lk {
+  display: inline-block;
+  height: 100%;
+  margin-right: 10px;
+  line-height: 40px;
+  font-size: 1.9rem;
+  color: #fff;
+}
+
+/* 主页 */
+/* 主页>分类与轮播图 */
+.top {
+  margin-top: 6px;
+  height: 405px;
+}
+.top .cats,
+.top .auths {
+  width: 210px;
+  height: 405px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+}
+/* 主页>分类与轮播图>分类 */
+.cat {
+  height: 57.5px;
+  width: 104px;
+  float: left;
+}
+.cat a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.cat:nth-child(4n + 1),
+.cat:nth-child(4n + 2) {
+  background-color: #faf6f3;
+}
+.cat .iconfont,
+.cat .name,
+.cat .num {
+  position: absolute;
+  font-size: 1.4rem;
+}
+.cat .iconfont {
+  left: 15px;
+  top: 18px;
+  font-size: 1.8rem;
+}
+.cat .name {
+  left: 47px;
+  top: 12px;
+}
+.cat .num {
+  left: 47px;
+  bottom: 12px;
+}
+/* 主页>分类与轮播图>作者推荐 */
+.auths{
+  padding: 0 7px;
+}
+._li{
+  font-size: 0px;
+  height: 30px;
+}
+.auths ._li{
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+._li::after{
+  display: block;
+  content: "";
+  height: 0;
+  border-bottom: 1px solid #eee;
+}
+._li:last-child::after{
+  display: none;
+}
+/* 主页>分类与轮播图>轮播图 */
+.top .slide {
+  width: 750px;
+  height: 100%;
+  padding: 4px 11px;
+  box-sizing: border-box;
+  margin: auto;
+}
+.top .slide a {
+  display: block;
+}
+.top .slide img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 主页>书籍推荐 */
+.rcm{
+  margin-top: 34px;
+}
+
+/* 主页>书籍推荐>本周强推 */
+.week{
+  width: 210px;
+}
+._li ._it{
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+._li ._it:first-child{
+  text-align: center;
+}
+._li ._it:last-child{
+  text-align: right;
+}
+.tbk .auth,
+._li ._tag{
+  color: #b6b6b6;
+}
+._li ._it._tag{
+  width: 54px;
+  text-align: center;
+}
+.tbk .auth{
+  width: 54px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.tbk .tl{
+  width: 102px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+._tag{
+  position: relative;
+}
+._tag::before{
+  border-left: 1.5px solid #b6b6b6;
+  border-top: 1.5px solid #b6b6b6;
+  display: block;
+  height: 1rem;
+  width: 0.5rem;
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  content: '';
+}
+._tag::after{
+  border-right: 1.5px solid #b6b6b6;
+  border-bottom: 1.5px solid #b6b6b6;
+  display: block;
+  height: 1rem;
+  width: 0.5rem;
+  position: absolute;
+  right: 6px;
+  bottom: 8px;
+  content: '';
+}
+
+/* 主页>书籍推荐>编辑推荐 */
+.edt{
+  width: 694px;
+  margin: auto;
+}
+.edt .sldw{
+  height: 173px;
+  overflow: hidden;
+}
+.edt .sld{
+  width: 300px;
+  overflow: hidden;
+}
+.edt .info{
+  margin-left: 320px;
+}
+.edt .info .h2{
+  padding-top: 38px;
+}
+.edt .sum{
+  margin: 11px 0 18px;
+  height: 44px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.edt .dtl{
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  border:none;
+  border-radius: 16px;
+  background-color: #f0425b;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+.ebk{
+  width: 228px;
+  border-top: 1px solid #eee;
+  margin-top: 18px;
+}
+.ebk .h2{
+  margin-top: 18px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.ebk .flw{
+  color: #f0425b;
+}
+.ebk .cou{
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding-right: 2px;
+}
+.ebk .sum{
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+/* 主页>排行榜 */
+.rks{
+  margin-top: 30px;
+}
+.rk{
+  width: 210px;
+  margin-left: 30px;
+}
+/* 主页>排行榜>男频 */
+.rk:first-child{
+  margin-left: 0;
+}
+.rbk .num{
+  width: 1.6rem;
+  height: 1.6rem;
+  margin: 7px 11px 7px 0;
+  line-height: 1.6rem;
+}
+._li:first-child .num{
+  background-color: #f0425b;
+  color: #fff;
+}
+._li:nth-child(2) .num{
+  background-color: #e4762b;
+  color: #fff;
+}
+._li:nth-child(3) .num{
+  background-color: #cacf2a;
+  color: #fff;
+}
+.rbk .tl{
+  width: 153px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.rbk .cou{
+  width: 30px;
+  color: #b6b6b6;
+  overflow: hidden;
+}
+.dtlw{
+  font-size: 1.4rem;
+  height: 84px;
+  padding: 14px 0;
+}
+.dtlw .cov{
+  width: 72px;
+  height: 84px; 
+}
+.dtl{
+  margin-right: 72px;
+}
+.dtl .num{
+  background-color: #eee;
+  color: #b6b6b6;
+  margin: 0;
+  width: 45px;
+  height: 18px;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 18px;
+}
+.dtl .no1{
+  color: #fff;
+  background-color: #f0425b;
+}
+.dtl p,
+.dtl .tl{
+  margin-top: 7px;
+}
+.dtl .tl{
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.dtl .flw,
+.dtl .cou{
+  color: #f0425b;
+}
+.dtl .cou{
+  font-weight: bold;
+  font-size: 1.6rem;
+  padding-right: 2px;
+}
+.dtl .inf{
+  color: #b6b6b6;
+}
+
+/* 主页>新书 */
+.newrw{
+  margin-top: 30px;
+}
+.newr{
+  width: 920px;
+}
+.nbks{
+  margin-left: 960px;
+}
+
+/* 主页>新书>新书推荐 */
+.newr{
+  height: 382px;
+}
+.newr .h2{
+  font-size: 24px;
+  margin-bottom: 4px;
+}
+.newr .big{
+  width: 188px;
+  padding: 0 11px;
+  height: 382px;
+  background-color: #eee;
+  position: relative;
+}
+.newr .sldw{
+  height: 110px;
+  margin-top: 30px;
+  background-color: #aaa;
+}
+.newr .big .h3{
+  margin-top: 18px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.newr .big .auth{
+  margin-top: 15px;
+  color: #f0425b;
+}
+.newr .flw{
+  margin-top: 8px;
+}
+.newr .cou{
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-right: 2px;
+}
+.newr .big .inf{
+  margin-top: 16px;
+  text-align: left;
+  line-height: 1.4;
+  overflow: hidden;
+  max-height: 78px;
+  text-overflow: ellipsis;
+}
+.newr .to{
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 32px;
+  width: 100px;
+  height:30px;
+  color: #fff;
+  background-color: #f0425b;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.nrl{
+  margin-left: 210px;;
+  width: 710px;
+}
+.newr ._it{
+  width: 325px;
+  height: 95px;
+  padding: 16px 0 16px 30px;
+  border-top: 1px solid #eee;
+}
+.newr ._it:first-child,
+.newr ._it:nth-child(2){
+  border-top: none;
+} 
+.newr ._li:nth-child(odd){
+  margin-right: 30px;
+}
+.newr .cov{
+  width: 75px;
+  height: 95px;
+}
+.newr .infs{
+  margin-left: 75px;
+  padding-left: 10px;
+}
+.newr .infs .sum{
+  line-height: 1.4;
+  margin: 12px 0 8px 0;
+  height: 40px;
+  overflow: hidden;
+}
+.newr .nrl .h3{
+  font-size: 1.6rem;
+  color: #666;
+  font-weight: bold;
+}
+.newr .nrl .iconfont{
+  margin-top: 2px;
+  color: #b6b6b6;
+}
+.newr .nrl .auth{
+  margin-top: 3px;
+  margin-left: 6px;
+  color: #b6b6b6;
+}
+.newr .nrl .zisu{
+  border: 1px solid #f0425b;
+  color: #f0425b;
+  padding: 2px 4px;
+}
+
+/* 主页>新书>新书榜 */
+
+/* 主页>更新与新人 */
+.newuw{
+  margin-top: 30px;
+}
+.newu{
+  width: 920px;
+}
+.npe{
+  margin-left: 960px;
+}
+/* 主页>更新与新人>最近更新 */
+.newu .big{
+  width: 188px;
+  height: 384px;
+  padding: 0 11px;
+  margin-right: 30px;
+  background-color: #f9f6f1;
+  text-align: right;
+}
+.newu .bk{
+  height: 156px;
+  padding: 20px 0 15px;
+}
+.newu .bk:first-child{
+  border-bottom: 2px solid #eee;
+}
+.newu .big .cov{
+  width: 75px;
+  height: 105px;
+}
+.newu .big .tl{
+  display: block;
+  font-size: 1.6rem;
+  padding-top: 26px;
+}
+.newu .big .zisu{
+  margin-top: 10px;
+  color: #f0425b;
+}
+.newu .big .auth{
+  margin-top: 10px;
+}
+.newu .big .bkb{
+  height: 40px;
+  margin: 6px 0 5px;
+  line-height: 1.4;
+  overflow: hidden;
+  text-align: left;
+  color: #b6b6b6;
+}
+.newu .up{
+  width: 325px;
+  margin: 0 10px;
+}
+.newu .up:first-of-type{
+  margin-left: 0;
+ }
+.newu ._li .tl{
+  max-width: 239px;
+  margin-left: 32px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* 主页>更新与新人>新人新书榜 */
+
+/* 主页>友情连接 */
+
+
+/* 详情页 */
+
+/* 详情页>主栏 */
+
+/* 详情页>主栏>层级条 */
+/* 详情页>主栏>小说总览 */
+/* 详情页>主栏>读书简介和评论 */
+/* 详情页>主栏>相关小说 */
+
+/* 详情页>侧边栏 */
+
+/* 页脚区域 */
+.foot {
+  padding: 50px 0 22px;
+  color: #cbcbcb;
+}
+.foot p {
+  margin: 14px auto;
+}
