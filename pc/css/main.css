@@ -219,13 +219,13 @@ a:active {
 .cat:nth-child(4n + 2) {
   background-color: #faf6f3;
 }
-.cat .iconfont,
+.cat .ICF,
 .cat .name,
 .cat .num {
   position: absolute;
   font-size: 1.4rem;
 }
-.cat .iconfont {
+.cat .ICF {
   left: 15px;
   top: 18px;
   font-size: 1.8rem;
@@ -622,19 +622,19 @@ a:active {
   }
   10%{
     transform:  translateX(40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
   33.33%{
     transform:  translateX(40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
   43.33%{
     transform:  translateX(-40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
   66.66%{
     transform:  translateX(-40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
   69.16%{
     transform:  translateX(-60px) scale(0.85);
@@ -652,7 +652,7 @@ a:active {
 @keyframes rotate_2 {
   0% {
     transform:  translateX(-40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
   2.5%{
     transform:  translateX(-60px) scale(0.85);
@@ -672,33 +672,33 @@ a:active {
   }
   43.33%{
     transform:  translateX(40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
   66.66%{
     transform:  translateX(40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
   76.66%{
     transform:  translateX(-40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
   100% {
     transform:  translateX(-40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
 }
 @keyframes rotate_3 {
   0%{
     transform:  translateX(40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
   10%{
     transform:  translateX(-40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
   33.33% {
     transform:  translateX(-40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
   35.83%{
     transform:  translateX(-60px) scale(0.85);
@@ -722,7 +722,7 @@ a:active {
   }
   100%{
     transform:  translateX(40px) scale(0.8);
-    z-index: 1
+    z-index: 1;
   }
 }
 
@@ -802,7 +802,7 @@ a:active {
   color: #666;
   font-weight: bold;
 }
-.newr .nrl .iconfont{
+.newr .nrl .ICF{
   margin-top: 2px;
   color: #b6b6b6;
 }
@@ -1085,7 +1085,6 @@ a:active {
 .relt{
   text-align: center;
   margin-top: 18px;
-  /* color: #222; */
   font-weight: bold;
 }
 
