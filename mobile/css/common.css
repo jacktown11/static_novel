@@ -23,3 +23,7 @@ body {font-family: sans-serif;line-height: 1.5;-webkit-user-select: none;color: 
 ._fl{float: left;}
 ._fr{float: right;}
 ._cf::after{content: "";height: 0;visibility: hidden;display: block;clear: both;}
+
+._gray{color: #969ba3;}
+._red{ color: #ed424b;}
+._blue{ color: #4284ed;}

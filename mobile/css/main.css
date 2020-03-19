@@ -346,15 +346,6 @@
   color: #969ba3;
   position: relative;
 }
-._gray{
-  color: #969ba3;
-}
-._red{
-  color: #ed424b;
-}
-._blue{
-  color: #4284ed;
-}
 ._shr2{
   transform-origin: right top;
   transform: scale(0.5);
@@ -403,8 +394,4 @@
   padding-bottom: 1rem;
   text-align: center;
   color: #969ba3;
-}
-
-* {
-  /* box-shadow: 0 0 1px #f00; */
 }
